@@ -3,14 +3,10 @@ import React, { useEffect } from "react";
 const Piano = () => {
  
   function playSound(key) {
-    const audio = new Audio(`./src/assets/key${key}.mp3`);
+    const audio = new Audio(`./assets/key${key}.mp3`);
 
   
-    if (audio.canPlayType("audio/mpeg") !== "") {
-      audio.play().catch((error) => console.error("Error playing audio", error));
-    } else {
-      console.error("Audio format not supported");
-    }
+   audio.play()
   }
 
   useEffect(() => {
