@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Piano = () => {
  
   function playSound(key) {
-    const audio = new Audio(`/piano/src/assets/key${key}.mp3`);
+    const audio = new Audio(`./src/assets/key${key}.mp3`);
 
   
     if (audio.canPlayType("audio/mpeg") !== "") {
