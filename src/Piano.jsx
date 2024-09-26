@@ -1,14 +1,63 @@
 import React, { useEffect } from "react";
+import sound1 from "./assets/key1.mp3";
+import sound2 from "./assets/key2.mp3";
+import sound3 from "./assets/key3.mp3";
+import sound4 from "./assets/key4.mp3";
+import sound5 from "./assets/key5.mp3";
+import sound6 from "./assets/key6.mp3";
+import sound7 from "./assets/key7.mp3";
+import sound8 from "./assets/key8.mp3";
+import sound9 from "./assets/key9.mp3";
+import sound10 from "./assets/key10.mp3";
+import sound11 from "./assets/key11.mp3";
+import sound12 from "./assets/key12.mp3";
+import sound13 from "./assets/key13.mp3";
+import sound14 from "./assets/key14.mp3";
+import sound15 from "./assets/key15.mp3";
+import sound16 from "./assets/key16.mp3";
+import sound17 from "./assets/key17.mp3";
+import sound18 from "./assets/key18.mp3";
+import sound19 from "./assets/key19.mp3";
+import sound20 from "./assets/key20.mp3";
+import sound21 from "./assets/key21.mp3";
+import sound22 from "./assets/key22.mp3";
+import sound23 from "./assets/key23.mp3";
+import sound24 from "./assets/key24.mp3";
+
+const sounds = {
+  1: sound1,
+  2: sound2,
+  3: sound3,
+  4: sound4,
+  5: sound5,
+  6: sound6,
+  7: sound7,
+  8: sound8,
+  9: sound9,
+  10: sound10,
+  11: sound11,
+  12: sound12,
+  13: sound13,
+  14: sound14,
+  15: sound15,
+  16: sound16,
+  17: sound17,
+  18: sound18,
+  19: sound19,
+  20: sound20,
+  21: sound21,
+  22: sound22,
+  23: sound23,
+  24: sound24,
+};
 
 const Piano = () => {
- 
   function playSound(key) {
-    const audio = new Audio(`./assets/key${key}.mp3`);
-
-  
-   audio.play()
+   
+ 
+    const audio = new Audio(sounds[key]);  
+    audio.play();
   }
-
   useEffect(() => {
     const handleKeydown = (e) => {
       switch (e.key) {
@@ -102,8 +151,8 @@ const Piano = () => {
       <p>Press the key or click the buttons to play a sound!</p>
       <div className="container">
         <div className="blackKeys">
-          <button onClick={() => playSound(1)}>w</button>
-          <button onClick={() => playSound(2)}>a</button>
+          <button className="btn" onClick={() => playSound(1)}>w</button>
+          <button className="btn" onClick={() => playSound(2)}>a</button>
           <button onClick={() => playSound(3)}>s</button>
           <button onClick={() => playSound(4)}>d</button>
           <button onClick={() => playSound(5)}>e</button>
