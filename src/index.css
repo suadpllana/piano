@@ -15,6 +15,10 @@ body{
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
+.drum {
+  color: purple;
+  text-decoration: underline;
+}
 .blackKeys{  
   display: grid;
   grid-template-columns: repeat(12,1fr);

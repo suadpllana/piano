@@ -179,6 +179,8 @@ const Piano = () => {
           <button onClick={() => playSound(24)}>x</button>
         </div>
       </div>
+
+      <h2>Play Drums here : <a className="drum" href="https://suadpllana.github.io/drums" target="_blank">Drums</a></h2>
     </div>
   );
 };
