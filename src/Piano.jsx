@@ -91,10 +91,6 @@ const Piano = () => {
         case "y":
           playSound(10);
           break;
-        case "h":
-          playSound(11);
-          break;
-        case "j":
           playSound(12);
           break;
         case "1":
@@ -149,7 +145,7 @@ const Piano = () => {
     <div>
       <h1>Play the piano 🎹</h1>
       <p>Press the key or click the buttons to play a sound!</p>
-      <div className="container">
+      <div className="piano">
         <div className="blackKeys">
           <button className="btn" onClick={() => playSound(1)}>w</button>
           <button className="btn" onClick={() => playSound(2)}>a</button>
@@ -162,7 +158,7 @@ const Piano = () => {
           <button onClick={() => playSound(9)}>g</button>
           <button onClick={() => playSound(10)}>y</button>
           <button onClick={() => playSound(11)}>h</button>
-          <button onClick={() => playSound(12)}>j</button>
+        
         </div>
         <div className="whiteKeys">
           <button onClick={() => playSound(13)}>1</button>
@@ -180,8 +176,9 @@ const Piano = () => {
         </div>
       </div>
 
-      <h2>Play Drums here : <a className="drum" href="https://suadpllana.github.io/drums" target="_blank">Drums</a></h2>
+      <h2 className="drum" >Play Drums here : <a href="https://suadpllana.github.io/drums" target="_blank">Drums</a></h2>
     </div>
+     
   );
 };
 
